@@ -3,117 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Día 1</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            color: #333;
-            margin: 0;
-        }
-        
-        .success-box {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .success-box h2 {
-            color: #4CAF50;
-        }
-        
-        .tasks {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        
-        .tasks h3 {
-            color: #764ba2;
-        }
-        
-        .tasks li {
-            padding: 8px;
-            color: #555;
-        }
-        
-        .status {
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            margin-left: 10px;
-        }
-        
-        .done {
-            background: #4CAF50;
-            color: white;
-        }
-        
-        .pending {
-            background: #ff9800;
-            color: white;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: white;
-        }
-    </style>
+    <title>Mi Portafolio - Gato-01</title>
+    
+    <!-- CSS - Estilos y animaciones -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1> Mi Portafolio en Flask</h1>
-            <p>Construyendo mi primer proyecto web con Python</p>
+            <h1>🚀 Mi Portafolio Animado</h1>
+            <p>Flask + CSS + JavaScript separado profesionalmente</p>
         </header>
         
-        <div class="success-box">
-            <h2> ¡Éxito! Flask está funcionando</h2>
-            <p>Tu servidor web está corriendo correctamente</p>
-            <p> Servidor activo en: <strong>http://127.0.0.1:5000</strong></p>
+        <!-- Sección de botones interactivos -->
+        <div style="text-align: center; margin: 40px 0;">
+            <button class="btn-animado" onclick="mostrarMensaje()">
+                💫 ¡Haz clic aquí!
+            </button>
+            
+            <button class="btn-secundario" onclick="cambiarColorTemporal()">
+                🎨 Cambiar color
+            </button>
         </div>
         
-        <div class="tasks">
-            <h3> Progreso del Día 1</h3>
-            <ul>
-                <li> Crear entorno virtual <span class="status done">Completado</span></li>
-                <li>Instalar Flask <span class="status done">Completado</span></li>
-                <li> Crear app.py <span class="status done">Completado</span></li>
-                <li>Servidor funcionando <span class="status done">Completado</span></li>
-                <li>Conectar SQL Server <span class="status pending">Día 2</span></li>
-                <li>Sistema de Login <span class="status pending">Día 3</span></li>
-            </ul>
+        <!-- Contenedor de proyectos -->
+        <div style="text-align: center;">
+            <h2 style="color: white;">Mis Proyectos</h2>
+            <div class="proyectos-container">
+                <div class="proyecto-card">
+                    <h3>📱 App con Flask</h3>
+                    <p>Aplicación web con Python</p>
+                    <small>✨ Click para interactuar</small>
+                </div>
+                
+                <div class="proyecto-card">
+                    <h3>🎨 CSS Animations</h3>
+                    <p>Efectos visuales profesionales</p>
+                    <small>✨ Pasa el mouse</small>
+                </div>
+                
+                <div class="proyecto-card">
+                    <h3>💾 JavaScript Dinámico</h3>
+                    <p>Interactividad real</p>
+                    <small>✨ Totalmente responsive</small>
+                </div>
+            </div>
         </div>
+        
+        <!-- Loader oculto inicialmente -->
+        <div id="loader" class="loader oculto"></div>
         
         <footer>
-            <p> Objetivo del día: Tener Flask corriendo y entender la estructura básica</p>
-            <p> Recuerda: ¡Estás construyendo tu portafolio profesional!</p>
+            <p>🎯 Arquitectura profesional: HTML + CSS + JS separados</p>
+            <button class="btn-secundario" onclick="mostrarLoader()">
+                ⏳ Simular carga
+            </button>
         </footer>
     </div>
+    
+    <!-- JavaScript - Al final del body para mejor rendimiento -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
